@@ -517,10 +517,15 @@
           flashNode($('pin_title'));
           return;
         }
+        const rememberEmailInput0 = $('remember_email_0'), rememberEmailInput1 = $('remember_email_1');
+        if (!rememberEmailInput0.checked && !rememberEmailInput1.checked) {
+          flashNode($('remember_email_title'));
+          return;
+        }
         emailInput.disabled = true;
         pinInput.disabled = true;
-        $('remember_email_1').disabled = true;
-        $('remember_email_0').disabled = true;
+        rememberEmailInput0.disabled = true;
+        rememberEmailInput1.disabled = true;
         changeButtonStatus(loadButton, 'disabled', '加载中……');
         fetch("https://ucas-jkrb-api-ngctyzveaf.cn-shanghai.fcapp.run/getLastData", {
           method: 'POST',
@@ -633,6 +638,8 @@
                   changeButtonStatus(loadButton, 'clickable', '加载上次信息');
                   emailInput.disabled = false;
                   pinInput.disabled = false;
+                  rememberEmailInput0.disabled = false;
+                  rememberEmailInput1.disabled = false;
                 }, 3000);
               }
             }
