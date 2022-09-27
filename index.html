@@ -1,0 +1,644 @@
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>最喜欢健康上报了</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+      }
+      input {
+        background-color: #fff;
+        color: #000;
+      }
+      .item-descrpition {
+        width: 100%;
+        line-height: 22px;
+        padding: 10px 15px;
+        font-size: 14px;
+        color: #606266;
+      }
+      .red {
+        color: #f00;
+      }
+      .input-wrapper {
+        background-color: #fff;
+      }
+      .input-text {
+        height: 46px;
+        margin: 0 15px;
+        font-size: 16px;
+        width: 95%;
+        width: -moz-available;
+        width: -webkit-fill-available;
+        width: fill-available;
+        outline: none;
+        border: none;
+      }
+      .button {
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        margin: 15px 15px;
+        height: 55px;
+        line-height: 55px;
+      }
+      .button-clickable {
+        background-color: #4285f4;
+      }
+      .button-disabled {
+        background-color: #d2d5da;
+      }
+      .button-success {
+        background-color: #27a21c;
+      }
+      .button-error {
+        background-color: #d93025;
+      }
+      .button-warning {
+        background-color: #ffb700;
+      }
+      .input-radio-wrapper {
+        padding: 10px 15px;
+      }
+      .input-radio-label {
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0px;
+        display: inline-block;
+      }
+      .binary-choice {
+        width: 47.5%;
+      }
+      .emphasized {
+        color: #f00;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="to_bottom" style="position: fixed; bottom: 50px; right: 50px; height: 25px; width: 25px; text-align: center; background-color: #c4dfb8; border-radius: 50%;">v</div>
+    <div id="email_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>SEP帐号&nbsp;&nbsp;</span></div>
+    <div class="input-wrapper"><input id="email" class="input-text" type="text" data-s="1" /></div>
+    <div id="pin_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>PIN</span></div>
+    <div class="input-wrapper"><input id="pin" class="input-text" type="password" data-s="1" /></div>
+    <div id="remember_email_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>加载成功后是否记住SEP帐户</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label binary-choice" for="remember_email_1">
+          <input id="remember_email_1" name="remember_email" type="radio" data-s="1" />
+          <span>是</span>
+        </label>
+        <label class="input-radio-label binary-choice" for="remember_email_0">
+          <input id="remember_email_0" name="remember_email" type="radio" data-s="1" />
+          <span>否</span>
+        </label>
+      </div>
+    </div>
+    <div id="load" class="button button-clickable">加载上次信息</div>
+    <div id="number_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>学工号</span></div>
+    <div class="input-wrapper"><input id="number" class="input-text" type="text" disabled data-s="1" /></div>
+    <div id="realname_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>姓名</span></div>
+    <div class="input-wrapper"><input id="realname" class="input-text" type="text" disabled data-s="1"/></div>
+    <div id="sfjshsjc_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>昨日是否接受核酸检测</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label binary-choice" for="sfjshsjc_1">
+          <input id="sfjshsjc_1" name="sfjshsjc" type="radio" disabled />
+          <span>是</span>
+        </label>
+        <label class="input-radio-label binary-choice" for="sfjshsjc_0">
+          <input id="sfjshsjc_0" name="sfjshsjc" type="radio" disabled />
+          <span>否</span>
+        </label>
+      </div>
+    </div>
+    <div id="jzdz_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>居住住址</span></div>
+    <div class="input-wrapper"><input id="jzdz" class="input-text" type="text" disabled /></div>
+    <div id="zrzsdd_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>昨日住宿地点</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label" for="zrzsdd_1">
+          <input id="zrzsdd_1" name="zrzsdd" type="radio" disabled />
+          <span>雁栖湖校区内</span>
+        </label>
+        <label class="input-radio-label" for="zrzsdd_2">
+          <input id="zrzsdd_2" name="zrzsdd" type="radio" disabled />
+          <span>玉泉路校区内</span>
+        </label>
+        <label class="input-radio-label" for="zrzsdd_3">
+          <input id="zrzsdd_3" name="zrzsdd" type="radio" disabled />
+          <span>中关村校区内</span>
+        </label>
+        <label class="input-radio-label" for="zrzsdd_4">
+          <input id="zrzsdd_4" name="zrzsdd" type="radio" disabled />
+          <span>奥运村校区内</span>
+        </label>
+        <label class="input-radio-label" for="zrzsdd_5">
+          <input id="zrzsdd_5" name="zrzsdd" type="radio" disabled />
+          <span>京内研究所自管集体宿舍</span>
+        </label>
+        <label class="input-radio-label" for="zrzsdd_6">
+          <input id="zrzsdd_6" name="zrzsdd" type="radio" disabled />
+          <span>京内校外自有住房（含租房）</span>
+        </label>
+        <label class="input-radio-label" for="zrzsdd_7">
+          <input id="zrzsdd_7" name="zrzsdd" type="radio" disabled />
+          <span>京内其他（校外酒店、亲友留宿等）</span>
+        </label>
+        <label class="input-radio-label" for="zrzsdd_8">
+          <input id="zrzsdd_8" name="zrzsdd" type="radio" disabled />
+          <span>京外</span>
+        </label>
+      </div>
+    </div>
+    <div id="sfzx_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>今日是否在校</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label" for="sfzx_1">
+          <input id="sfzx_1" name="sfzx" type="radio" disabled />
+          <span>是，主要在雁栖湖校区</span>
+        </label>
+        <label class="input-radio-label" for="sfzx_2">
+          <input id="sfzx_2" name="sfzx" type="radio" disabled />
+          <span>是，主要在玉泉路校区</span>
+        </label>
+        <label class="input-radio-label" for="sfzx_3">
+          <input id="sfzx_3" name="sfzx" type="radio" disabled />
+          <span>是，主要在中关村校区</span>
+        </label>
+        <label class="input-radio-label" for="sfzx_4">
+          <input id="sfzx_4" name="sfzx" type="radio" disabled />
+          <span>是，主要在奥运村校区</span>
+        </label>
+        <label class="input-radio-label" for="sfzx_5">
+          <input id="sfzx_5" name="sfzx" type="radio" disabled />
+          <span>是，主要在奥运村校区</span>
+        </label>
+        <label class="input-radio-label" for="sfzx_6">
+          <input id="sfzx_6" name="sfzx" type="radio" disabled />
+          <span>否</span>
+        </label>
+      </div>
+    </div>
+    <div id="dqszdd_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>当前所在地点</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label" for="dqszdd_1">
+          <input id="dqszdd_1" name="dqszdd" type="radio" disabled />
+          <span>北京</span>
+        </label>
+        <label class="input-radio-label" for="dqszdd_2">
+          <input id="dqszdd_2" name="dqszdd" type="radio" disabled />
+          <span>京外境内</span>
+        </label>
+        <label class="input-radio-label" for="dqszdd_3">
+          <input id="dqszdd_3" name="dqszdd" type="radio" disabled />
+          <span>国（境）外</span>
+        </label>
+      </div>
+    </div>
+    <div id="geo_api_info_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>当前位置</span></div>
+    <div class="input-wrapper"><input id="geo_api_info" class="input-text" type="text" disabled /></div>
+    <div id="dqsfzzgfxdq_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>当前是否在中高风险地区</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label" for="dqsfzzgfxdq_1">
+          <input id="dqsfzzgfxdq_1" name="dqsfzzgfxdq" type="radio" disabled />
+          <span>当前在京内中高风险地区所在街道</span>
+        </label>
+        <label class="input-radio-label" for="dqsfzzgfxdq_2">
+          <input id="dqsfzzgfxdq_2" name="dqsfzzgfxdq" type="radio" disabled />
+          <span>当前在京外中高风险地区所在县（市、区、旗，直辖市为所在区）</span>
+        </label>
+        <label class="input-radio-label" for="dqsfzzgfxdq_3">
+          <input id="dqsfzzgfxdq_3" name="dqsfzzgfxdq" type="radio" disabled />
+          <span>当前在京外中高风险地区所在地级市域内其他县</span>
+        </label>
+        <label class="input-radio-label" for="dqsfzzgfxdq_4">
+          <input id="dqsfzzgfxdq_4" name="dqsfzzgfxdq" type="radio" disabled />
+          <span>无以上情况</span>
+        </label>
+      </div>
+    </div>
+    <div id="zgfxljs_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>7日内是否有中高风险地区旅居史</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label" for="zgfxljs_1">
+          <input id="zgfxljs_1" name="zgfxljs" type="radio" disabled />
+          <span>7日内有京内中高风险地区旅居史</span>
+        </label>
+        <label class="input-radio-label" for="zgfxljs_2">
+          <input id="zgfxljs_2" name="zgfxljs" type="radio" disabled />
+          <span>7日内有京外中高风险地区所在县（市、区、旗，直辖市为所在区）旅居史</span>
+        </label>
+        <label class="input-radio-label" for="zgfxljs_3">
+          <input id="zgfxljs_3" name="zgfxljs" type="radio" disabled />
+          <span>7日内有京外中高风险地区所在地级市域内其他县（市、区、旗，直辖市为区）旅居史</span>
+        </label>
+        <label class="input-radio-label" for="zgfxljs_4">
+          <input id="zgfxljs_4" name="zgfxljs" type="radio" disabled />
+          <span>无以上情况</span>
+        </label>
+      </div>
+    </div>
+    <div id="tw_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>今日体温</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label binary-choice" for="tw_1">
+          <input id="tw_1" name="tw" type="radio" disabled />
+          <span>37.2℃及以下</span>
+        </label>
+        <label class="input-radio-label binary-choice" for="tw_2">
+          <input id="tw_2" name="tw" type="radio" disabled />
+          <span>37.3℃及以上</span>
+        </label>
+      </div>
+    </div>
+    <div id="sffrzz_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>是否出现发热、乏力、干咳、呼吸困难等症状</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label binary-choice" for="sffrzz_1">
+          <input id="sffrzz_1" name="sffrzz" type="radio" disabled />
+          <span>是</span>
+        </label>
+        <label class="input-radio-label binary-choice" for="sffrzz_0">
+          <input id="sffrzz_0" name="sffrzz" type="radio" disabled />
+          <span>否</span>
+        </label>
+      </div>
+    </div>
+    <div id="dqqk1_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>您当前属于以下哪种情况</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label" for="dqqk1_1">
+          <input id="dqqk1_1" name="dqqk1" type="radio" disabled data-v="{&quot;dqqk1qt&quot;:&quot;none&quot;}" />
+          <span>正常</span>
+        </label>
+        <label class="input-radio-label" for="dqqk1_2">
+          <input id="dqqk1_2" name="dqqk1" type="radio" disabled data-v="{&quot;dqqk1qt&quot;:&quot;none&quot;}" />
+          <span>与公布病例行程轨迹有时空交集</span>
+        </label>
+        <label class="input-radio-label" for="dqqk1_3">
+          <input id="dqqk1_3" name="dqqk1" type="radio" disabled data-v="{&quot;dqqk1qt&quot;:&quot;none&quot;}" />
+          <span>密切接触者/次密切接触者（疾控部门认定）</span>
+        </label>
+        <label class="input-radio-label" for="dqqk1_4">
+          <input id="dqqk1_4" name="dqqk1" type="radio" disabled data-v="{&quot;dqqk1qt&quot;:&quot;none&quot;}" />
+          <span>核酸阳性/确诊/无症状感染者</span>
+        </label>
+        <label class="input-radio-label" for="dqqk1_5">
+          <input id="dqqk1_5" name="dqqk1" type="radio" disabled data-v="{&quot;dqqk1qt&quot;:&quot;block&quot;}" />
+          <span>其他，请填写详情</span>
+        </label>
+      </div>
+    </div>
+    <div id="dqqk1qt_div" style="display: none;">
+      <div id="dqqk1qt_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>您当前属于以下哪种情况其他，请填写详情1</span></div>
+      <div class="input-wrapper"><input id="dqqk1qt" class="input-text" type="text" disabled /></div>
+    </div>
+    <div id="dqqk2_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>您当前属于以下哪种情况</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label" for="dqqk2_1">
+          <input id="dqqk2_1" name="dqqk2" type="radio" disabled data-v="{&quot;dqqk2qt&quot;:&quot;none&quot;}" />
+          <span>无异常</span>
+        </label>
+        <label class="input-radio-label" for="dqqk2_2">
+          <input id="dqqk2_2" name="dqqk2" type="radio" disabled data-v="{&quot;dqqk2qt&quot;:&quot;none&quot;}" />
+          <span>健康宝弹窗</span>
+        </label>
+        <label class="input-radio-label" for="dqqk2_3">
+          <input id="dqqk2_3" name="dqqk2" type="radio" disabled data-v="{&quot;dqqk2qt&quot;:&quot;none&quot;}" />
+          <span>居家隔离</span>
+        </label>
+        <label class="input-radio-label" for="dqqk2_4">
+          <input id="dqqk2_4" name="dqqk2" type="radio" disabled data-v="{&quot;dqqk2qt&quot;:&quot;none&quot;}" />
+          <span>集中隔离</span>
+        </label>
+        <label class="input-radio-label" for="dqqk2_5">
+          <input id="dqqk2_5" name="dqqk2" type="radio" disabled data-v="{&quot;dqqk2qt&quot;:&quot;none&quot;}" />
+          <span>因新冠肺炎在院治疗</span>
+        </label>
+        <label class="input-radio-label" for="dqqk2_6">
+          <input id="dqqk2_6" name="dqqk2" type="radio" disabled data-v="{&quot;dqqk2qt&quot;:&quot;block&quot;}" />
+          <span>其他，请填写详情</span>
+        </label>
+      </div>
+    </div>
+    <div id="dqqk2qt_div" style="display: none;">
+      <div id="dqqk2qt_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>您当前属于以下哪种情况其他，请填写详情2</span></div>
+      <div class="input-wrapper"><input id="dqqk2qt" class="input-text" type="text" disabled /></div>
+    </div>
+    <div id="dyzymjzqk_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>第一针疫苗接种情况</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label" for="dyzymjzqk_1">
+          <input id="dyzymjzqk_1" name="dyzymjzqk" type="radio" disabled data-v="{&quot;dyzjzsj&quot;:&quot;block&quot;,&quot;dyzwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（科兴中维灭活疫苗）</span>
+        </label>
+        <label class="input-radio-label" for="dyzymjzqk_2">
+          <input id="dyzymjzqk_2" name="dyzymjzqk" type="radio" disabled data-v="{&quot;dyzjzsj&quot;:&quot;block&quot;,&quot;dyzwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（国药中生北京/成都/武汉/长春/兰州/XX生物灭活疫苗）</span>
+        </label>
+        <label class="input-radio-label" for="dyzymjzqk_3">
+          <input id="dyzymjzqk_3" name="dyzymjzqk" type="radio" disabled data-v="{&quot;dyzjzsj&quot;:&quot;block&quot;,&quot;dyzwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（安徽智飞重组CHO细胞）</span>
+        </label>
+        <label class="input-radio-label" for="dyzymjzqk_4">
+          <input id="dyzymjzqk_4" name="dyzymjzqk" type="radio" disabled data-v="{&quot;dyzjzsj&quot;:&quot;block&quot;,&quot;dyzwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（康希诺腺病毒载体）</span>
+        </label>
+        <label class="input-radio-label" for="dyzymjzqk_5">
+          <input id="dyzymjzqk_5" name="dyzymjzqk" type="radio" disabled data-v="{&quot;dyzjzsj&quot;:&quot;block&quot;,&quot;dyzwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（辉瑞/莫德纳mRNA等境外疫苗）</span>
+        </label>
+        <label class="input-radio-label" for="dyzymjzqk_6">
+          <input id="dyzymjzqk_6" name="dyzymjzqk" type="radio" disabled data-v="{&quot;dyzjzsj&quot;:&quot;none&quot;,&quot;dyzwjzyy&quot;:&quot;block&quot;}" />
+          <span>未接种（请填写原因）</span>
+        </label>
+      </div>
+    </div>
+    <div id="dyzjzsj_div" style="display: none;">
+      <div id="dyzjzsj_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>第一针疫苗接种时间</span></div>
+      <div class="input-wrapper"><input id="dyzjzsj" class="input-text" type="date" disabled /></div>
+    </div>
+    <div id="dyzwjzyy_div" style="display: none;">
+      <div id="dyzwjzyy_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>第一针疫苗未接种原因</span></div>
+      <div class="input-wrapper"><input id="dyzwjzyy" class="input-text" type="text" disabled /></div>
+    </div>
+    <div id="dezymjzqk_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>第二针疫苗接种情况</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label" for="dezymjzqk_1">
+          <input id="dezymjzqk_1" name="dezymjzqk" type="radio" disabled data-v="{&quot;dezjzsj&quot;:&quot;block&quot;,&quot;dezwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（科兴中维灭活疫苗）</span>
+        </label>
+        <label class="input-radio-label" for="dezymjzqk_2">
+          <input id="dezymjzqk_2" name="dezymjzqk" type="radio" disabled data-v="{&quot;dezjzsj&quot;:&quot;block&quot;,&quot;dezwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（国药中生北京/成都/武汉/长春/兰州/XX生物灭活疫苗）</span>
+        </label>
+        <label class="input-radio-label" for="dezymjzqk_3">
+          <input id="dezymjzqk_3" name="dezymjzqk" type="radio" disabled data-v="{&quot;dezjzsj&quot;:&quot;block&quot;,&quot;dezwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（安徽智飞重组CHO细胞）</span>
+        </label>
+        <label class="input-radio-label" for="dezymjzqk_4">
+          <input id="dezymjzqk_4" name="dezymjzqk" type="radio" disabled data-v="{&quot;dezjzsj&quot;:&quot;block&quot;,&quot;dezwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（康希诺腺病毒载体）</span>
+        </label>
+        <label class="input-radio-label" for="dezymjzqk_5">
+          <input id="dezymjzqk_5" name="dezymjzqk" type="radio" disabled data-v="{&quot;dezjzsj&quot;:&quot;block&quot;,&quot;dezwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（辉瑞/莫德纳mRNA等境外疫苗）</span>
+        </label>
+        <label class="input-radio-label" for="dezymjzqk_6">
+          <input id="dezymjzqk_6" name="dezymjzqk" type="radio" disabled data-v="{&quot;dezjzsj&quot;:&quot;none&quot;,&quot;dezwjzyy&quot;:&quot;block&quot;}" />
+          <span>未接种（请填写原因）</span>
+        </label>
+      </div>
+    </div>
+    <div id="dezjzsj_div" style="display: none;">
+      <div id="dezjzsj_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>第二针疫苗接种时间</span></div>
+      <div class="input-wrapper"><input id="dezjzsj" class="input-text" type="date" disabled /></div>
+    </div>
+    <div id="dezwjzyy_div" style="display: none;">
+      <div id="dezwjzyy_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>第二针疫苗未接种原因</span></div>
+      <div class="input-wrapper"><input id="dezwjzyy" class="input-text" type="text" disabled /></div>
+    </div>
+    <div id="dszymjzqk_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>第三针疫苗接种情况</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label" for="dszymjzqk_1">
+          <input id="dszymjzqk_1" name="dszymjzqk" type="radio" disabled data-v="{&quot;dszjzsj&quot;:&quot;block&quot;,&quot;dszwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（科兴中维灭活疫苗）</span>
+        </label>
+        <label class="input-radio-label" for="dszymjzqk_2">
+          <input id="dszymjzqk_2" name="dszymjzqk" type="radio" disabled data-v="{&quot;dszjzsj&quot;:&quot;block&quot;,&quot;dszwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（国药中生北京/成都/武汉/长春/兰州/XX生物灭活疫苗）</span>
+        </label>
+        <label class="input-radio-label" for="dszymjzqk_3">
+          <input id="dszymjzqk_3" name="dszymjzqk" type="radio" disabled data-v="{&quot;dszjzsj&quot;:&quot;block&quot;,&quot;dszwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（安徽智飞重组CHO细胞）</span>
+        </label>
+        <label class="input-radio-label" for="dszymjzqk_4">
+          <input id="dszymjzqk_4" name="dszymjzqk" type="radio" disabled data-v="{&quot;dszjzsj&quot;:&quot;block&quot;,&quot;dszwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（康希诺腺病毒载体）</span>
+        </label>
+        <label class="input-radio-label" for="dszymjzqk_5">
+          <input id="dszymjzqk_5" name="dszymjzqk" type="radio" disabled data-v="{&quot;dszjzsj&quot;:&quot;block&quot;,&quot;dszwjzyy&quot;:&quot;none&quot;}" />
+          <span>已接种（辉瑞/莫德纳mRNA等境外疫苗）</span>
+        </label>
+        <label class="input-radio-label" for="dszymjzqk_6">
+          <input id="dszymjzqk_6" name="dszymjzqk" type="radio" disabled data-v="{&quot;dszjzsj&quot;:&quot;none&quot;,&quot;dszwjzyy&quot;:&quot;block&quot;}" />
+          <span>未接种（请填写原因）</span>
+        </label>
+      </div>
+    </div>
+    <div id="dszjzsj_div" style="display: none;">
+      <div id="dszjzsj_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>第三针疫苗接种时间</span></div>
+      <div class="input-wrapper"><input id="dszjzsj" class="input-text" type="date" disabled /></div>
+    </div>
+    <div id="dszwjzyy_div" style="display: none;">
+      <div id="dszwjzyy_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>第三针疫苗未接种原因</span></div>
+      <div class="input-wrapper"><input id="dszwjzyy" class="input-text" type="text" disabled /></div>
+    </div>
+    <div id="gtshryjkzk_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>共同生活人员健康状况</span></div>
+    <div class="input-wrapper">
+      <div class="input-radio-wrapper">
+        <label class="input-radio-label" for="gtshryjkzk_1">
+          <input id="gtshryjkzk_1" name="gtshryjkzk" type="radio" disabled />
+          <span>无异常</span>
+        </label>
+        <label class="input-radio-label" for="gtshryjkzk_2">
+          <input id="gtshryjkzk_2" name="gtshryjkzk" type="radio" disabled />
+          <span>出现发热、乏力、干咳、呼吸困难等可疑症状</span>
+        </label>
+        <label class="input-radio-label" for="gtshryjkzk_3">
+          <input id="gtshryjkzk_3" name="gtshryjkzk" type="radio" disabled  />
+          <span>与公布病例行程轨迹有时空交集</span>
+        </label>
+        <label class="input-radio-label" for="gtshryjkzk_4">
+          <input id="gtshryjkzk_4" name="gtshryjkzk" type="radio" disabled  />
+          <span>因密接/次密接被执行集中隔离或居家隔离</span>
+        </label>
+        <label class="input-radio-label" for="gtshryjkzk_5">
+          <input id="gtshryjkzk_5" name="gtshryjkzk" type="radio" disabled />
+          <span>核酸阳性/确诊/无症状感染者</span>
+        </label>
+        <label class="input-radio-label" for="gtshryjkzk_6">
+          <input id="gtshryjkzk_6" name="gtshryjkzk" type="radio" disabled />
+          <span>无共同生活成员</span>
+        </label>
+      </div>
+    </div>
+    <div class="item-descrpition"><span>其他信息</span></div>
+    <div class="input-wrapper"><input id="extinfo" class="input-text" type="text" disabled /></div>
+    <div id="save" class="button button-disabled">保存信息</div>
+    <input id="token" type="hidden" />
+    <script>
+      function $(id) {
+        return document.getElementById(id);
+      }
+      function flashNode(node) {
+        if (node !== null && node !== void 0) {
+          node.scrollIntoView();
+          for (let i = 0; i < 3000; i += 300) {
+            setTimeout(() => node.classList.toggle('emphasized'), i);
+          }
+        }
+      }
+      function changeButtonStatus(buttonNode, buttonStatus, displayText) {
+        buttonNode.classList.remove('button-clickable', 'button-disabled', 'button-error', 'button-success', 'button-warning');
+        buttonNode.classList.add(`button-${buttonStatus}`);
+        if (typeof displayText === 'string' && displayText.length > 0) {
+          buttonNode.innerText = displayText;
+        }
+      }
+      const radioElementNames = ['zrzsdd', 'sfzx', 'dqszdd', 'dqsfzzgfxdq', 'zgfxljs', 'tw', 'sffrzz', 'dqqk1', 'dqqk2', 'sfjshsjc', 'dyzymjzqk', 'dezymjzqk', 'dszymjzqk', 'gtshryjkzk'];
+      const textElementIds = ['number', 'realname', 'jzdz', 'geo_api_info', 'dqqk1qt', 'dqqk2qt', 'dyzwjzyy', 'dyzjzsj', 'dezwjzyy', 'dezjzsj', 'dszwjzyy', 'dszjzsj'];
+      const rememberedEmail = localStorage.getItem('ucas_jkrb_remember_email');
+      if (typeof rememberedEmail === 'string' && rememberedEmail.length > 0) {
+        $('email').value = rememberedEmail;
+        $('remember_email_1').checked = true;
+      } else {
+        $('remember_email_0').checked = true;
+      }
+      $('to_bottom').onclick = () => scrollTo(0, document.documentElement.clientHeight);
+      $('load').onclick = (event) => {
+        const loadButton = event.target;
+        if (!loadButton.classList.contains('button-clickable')) {
+          return;
+        }
+        const emailInput = $('email');
+        if (emailInput.value.length === 0) {
+          flashNode($('email_title'));
+          return;
+        }
+        const pinInput = $('pin');
+        if (pinInput.value.length === 0) {
+          flashNode($('pin_title'));
+          return;
+        }
+        emailInput.disabled = true;
+        pinInput.disabled = true;
+        $('remember_email_1').disabled = true;
+        $('remember_email_0').disabled = true;
+        changeButtonStatus(loadButton, 'disabled', '加载中……');
+        fetch("https://ucas-jkrb-api-ngctyzveaf.cn-shanghai.fcapp.run/getLastData", {
+          method: 'POST',
+          body: JSON.stringify({
+            email: emailInput.value,
+            pin: pinInput.value,
+          }),
+        })
+          .then((res) => res.json())
+          .then((json) => {
+            if (json.ok && Object.prototype.toString.call(json.data) === '[object Object]') {
+              $('token').value = json.token;
+              changeButtonStatus(loadButton, 'success', '加载成功');
+              if ($('remember_email_1').checked) {
+                localStorage.setItem('ucas_jkrb_remember_email', emailInput.value);
+              } else if ($('remember_email_0').checked) {
+                localStorage.removeItem('ucas_jkrb_remember_email');
+              }
+              for (const inputNode of document.getElementsByTagName('input')) {
+                if (inputNode.getAttribute('data-s') !== '1') {
+                  inputNode.disabled = false;
+                }
+                if (inputNode.hasAttribute('data-v')) {
+                  inputNode.onchange = (event) => {
+                    const displayData = JSON.parse(event.target.getAttribute('data-v'));
+                    for (const inputId in displayData) {
+                      $(inputId).value = '';
+                      $(`${inputId}_div`).style.display = displayData[inputId];
+                    }
+                  }
+                }
+              }
+              const lastData = json.data;
+              let isLastDataComplete = true;
+              radioElementNames.forEach((name) => {
+                if (lastData[name] !== null && lastData[name] !== void 0) {
+                  const radioInputNode = $(`${name}_${lastData[name]}`);
+                  radioInputNode.checked = true;
+                  radioInputNode.dispatchEvent(new Event('change'));
+                } else {
+                  isLastDataComplete = false;
+                }
+              });
+              textElementIds.forEach((id) => {
+                if (lastData[id] !== null && lastData[id] !== void 0) {
+                  $(id).value = lastData[id];
+                } else {
+                  isLastDataComplete = false;
+                }
+              });
+              if (!isLastDataComplete) {
+                $('number').disabled = false;
+                $('realname').disabled = false;
+                changeButtonStatus(loadButton, 'warning', '数据不完整，请手动填写');
+              }
+              const saveButton = $('save');
+              changeButtonStatus(saveButton, 'clickable');
+              saveButton.onclick = () => {
+                if (!saveButton.classList.contains('button-clickable')) {
+                  return;
+                }
+                const uploadData = {};
+                for (const name of radioElementNames) {
+                  let isChecked = false;
+                  for (const radioInputNode of document.getElementsByName(name)) {
+                    if (radioInputNode.checked) {
+                      uploadData[name] = radioInputNode.id.split('_')[1];
+                      isChecked = true;
+                      break;
+                    }
+                  }
+                  if (!isChecked) {
+                    flashNode($(`${name}_title`));
+                    return;
+                  }
+                }
+                for (const id of textElementIds) {
+                  const textInputNode = $(id), textValue = textInputNode.value, optionalInputContainer = textInputNode.closest('div[id$="_div"]');
+                  if (textValue.length > 0 || textValue.length == 0 && optionalInputContainer !== null && getComputedStyle(optionalInputContainer).display === 'none') {
+                    uploadData[id] = textValue;
+                  } else {
+                    flashNode($(`${id}_title`));
+                    return;
+                  }
+                }
+                changeButtonStatus(saveButton, 'disabled', '保存中……');
+                fetch('https://ucas-jkrb-api-ngctyzveaf.cn-shanghai.fcapp.run/saveData', {
+                  method: 'POST',
+                  headers: { 'X-Token': $('token').value },
+                  body: JSON.stringify(uploadData),
+                })
+                  .then((res) => res.json())
+                  .then(json => {
+                    if (json.ok) {
+                      changeButtonStatus(saveButton, 'success', json.msg);
+                      setTimeout(() => changeButtonStatus(saveButton, 'clickable', '保存信息'), 5000);
+                    } else {
+                      changeButtonStatus(saveButton, 'error', json.msg);
+                      if (json.msg.indexOf('请刷新页面') === -1) {
+                        setTimeout(() => changeButtonStatus(saveButton, 'clickable', '保存信息'), 3000);
+                      }
+                    }
+                  })
+                  .catch(() => changeButtonStatus(saveButton, 'error', '网络错误，请稍候重试'));
+              };
+            } else {
+              changeButtonStatus(loadButton, 'error', json.msg);
+              if (json.msg !== '网络错误，请稍候重试') {
+                setTimeout(() => {
+                  changeButtonStatus(loadButton, 'clickable', '加载上次信息');
+                  emailInput.disabled = false;
+                  pinInput.disabled = false;
+                }, 3000);
+              }
+            }
+          })
+          .catch(() => changeButtonStatus(loadButton, 'error', '网络错误，请稍候重试'));
+      };
+    </script>
+  </body>
+</html>
