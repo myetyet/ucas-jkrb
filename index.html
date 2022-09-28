@@ -11,7 +11,7 @@
         color: #000;
       }
       .item-descrpition {
-        width: 100%;
+        width: 95%;
         line-height: 22px;
         padding: 10px 15px;
         font-size: 14px;
@@ -28,9 +28,6 @@
         margin: 0 15px;
         font-size: 16px;
         width: 95%;
-        width: -moz-available;
-        width: -webkit-fill-available;
-        width: fill-available;
         outline: none;
         border: none;
       }
@@ -67,7 +64,10 @@
         display: inline-block;
       }
       .binary-choice {
-        width: 47.5%;
+        width: calc(95% / 2);
+      }
+      .ternary-choice {
+        width: calc(95% / 3);
       }
       .emphasized {
         color: #f00;
@@ -76,8 +76,8 @@
     </style>
   </head>
   <body>
-    <div id="to_bottom" style="position: fixed; bottom: 50px; right: 50px; height: 25px; width: 25px; text-align: center; background-color: #c4dfb8; border-radius: 50%;">v</div>
-    <div id="email_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>SEP帐号&nbsp;&nbsp;</span></div>
+    <div id="to_bottom" style="position: fixed; bottom: 40px; right: 40px; height: 25px; width: 25px; text-align: center; background-color: #c4dfb8; border-radius: 50%;">v</div>
+    <div id="email_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>SEP帐号</span></div>
     <div class="input-wrapper"><input id="email" class="input-text" type="text" data-s="1" /></div>
     <div id="pin_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>PIN</span></div>
     <div class="input-wrapper"><input id="pin" class="input-text" type="password" data-s="1" /></div>
@@ -183,15 +183,15 @@
     <div id="dqszdd_title" class="item-descrpition"><span class="red">*&nbsp;</span><span>当前所在地点</span></div>
     <div class="input-wrapper">
       <div class="input-radio-wrapper">
-        <label class="input-radio-label" for="dqszdd_1">
+        <label class="input-radio-label ternary-choice" for="dqszdd_1">
           <input id="dqszdd_1" name="dqszdd" type="radio" disabled />
           <span>北京</span>
         </label>
-        <label class="input-radio-label" for="dqszdd_2">
+        <label class="input-radio-label ternary-choice" for="dqszdd_2">
           <input id="dqszdd_2" name="dqszdd" type="radio" disabled />
           <span>京外境内</span>
         </label>
-        <label class="input-radio-label" for="dqszdd_3">
+        <label class="input-radio-label ternary-choice" for="dqszdd_3">
           <input id="dqszdd_3" name="dqszdd" type="radio" disabled />
           <span>国（境）外</span>
         </label>
